@@ -5,26 +5,28 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 
-<!--
-  TODO exercice 1 (étape 0) : écrire le contenu de cette vue FXML.
-
-  La racine est déjà placée (un BorderPane) ainsi que les imports nécessaires.
-  À vous d'ajouter l'intérieur :
-    - <padding>     : 20 px de marge intérieure (utiliser <Insets .../>)
-    - <top>         : un Label "Bienvenue dans le monde FXML !" stylé en gras 20px,
-                      aligné au centre via BorderPane.alignment="CENTER".
-    - <center>      : un Label explicatif (texte libre), wrapText="true", aligné
-                      au centre.
-    - <bottom>      : un Button "D'accord, c'est magique", aligné au centre.
-
-  Aucun fx:controller n'est nécessaire (vue purement statique, pas de logique).
-
-  Référez-vous à la section "Cheat-sheet FXML" du README pour la syntaxe XML
-  générale, et à la Javadoc JavaFX 25 (https://openjfx.io/javadoc/25/) pour les
-  attributs précis de chaque composant.
--->
-
 <BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
             prefWidth="420.0" prefHeight="240.0">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <top>
+        <Label text="Bienvenue dans le monde FXML !"
+               style="-fx-font-weight: bold; -fx-font-size: 20px;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <Label text="L'interface est décrite en XML, pas en Java !"
+               wrapText="true"
+               BorderPane.alignment="CENTER"/>
+    </center>
+
+    <bottom>
+        <Button text="D'accord, c'est magique"
+                BorderPane.alignment="CENTER"/>
+    </bottom>
 
 </BorderPane>
